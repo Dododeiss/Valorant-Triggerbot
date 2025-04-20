@@ -27,7 +27,7 @@ except ModuleNotFoundError:
 
 try:
     TRIGGER, HIGHLIGHT = [line.strip() for line in open("config.txt")]
-    print(f"{SUCCESS} Hotkey: {TRIGGER}\n{SUCCESS} Enemy highlight colour: {HIGHLIGHT}\n")
+    print(f"{SUCCESS} Hotkey: {k}\n{SUCCESS} Enemy highlight colour: {red}\n")
 except (FileNotFoundError, ValueError):
     print(f"{ERROR} Missing or invalid config.txt\n")
     HIGHLIGHT = input(f"{INFO} Enemy highlight colour\n\n[\x1b[35m1\x1b[38;5;255m] Red (default)\n[\x1b[35m2\x1b[38;5;255m] Purple\n\n> ")
